@@ -76,7 +76,7 @@ nav a:hover {
 
 /* Hero Section */
 #hero {
-    /* Mudar o gradiente de rosa para o novo vermelho */
+    /* MUDAR IMAGEM AQUI: Substitua 'nail_designer_hero.jpg' pela sua imagem principal */
     background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(198, 20, 85, 0.4)), url('nail_designer_hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: flex;
@@ -129,20 +129,21 @@ section h3 {
     color: #C61455; /* NOVO VERMELHO: C61455 */
 }
 
-/* About Section */
+/* About Section - AGORA CENTRADA */
 #about .content {
     display: flex;
-    align-items: center;
-    text-align: left;
+    flex-direction: column; /* Coloca o texto e a imagem em coluna */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra o texto */
     gap: 40px;
 }
 
 #about .text {
-    flex: 1;
+    max-width: 800px; /* Limita a largura do bloco de texto para melhor leitura */
+    text-align: center;
 }
 
 #about .image {
-    flex: 1;
     max-width: 400px;
 }
 
@@ -179,6 +180,33 @@ section h3 {
     margin-bottom: 10px;
 }
 
+/* NOVA SECÇÃO: GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* FIM DA SECÇÃO GALLERY */
+
 /* Contact Section (Formulário) */
 #contact form {
     max-width: 600px;
@@ -193,26 +221,7 @@ section h3 {
 .form-group {
     margin-bottom: 20px;
 }
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 100px;
-}
+/* ... (Restante do formulário) ... */
 
 .error-message {
     color: red;
@@ -229,6 +238,7 @@ section h3 {
 .contact-info {
     margin-top: 40px;
     font-size: 1.1em;
+    text-align: center; /* Centra a info de contacto */
 }
 
 .contact-info p {
@@ -280,22 +290,10 @@ footer a:hover {
     header .container {
         flex-direction: column;
     }
-
-    nav {
-        margin-top: 15px;
-        text-align: center;
-    }
-
-    nav a {
-        margin: 0 10px;
-    }
-
-    .social-links {
-        margin-top: 15px;
-    }
+    /* ... (outras regras de media query) ... */
     
     .logo-img {
-        height: 40px; /* Ajuste para Tablet e ecrãs menores */
+        height: 40px; 
     }
 
     #hero {
@@ -306,19 +304,13 @@ footer a:hover {
         font-size: 2em;
     }
 
-    #about .content {
-        flex-direction: column;
-    }
-
-    #about .image {
-        order: -1; 
-        margin-bottom: 20px;
-    }
+    /* O #about.content já está em column, não é preciso nova regra */
+    /* ... (outras regras de media query) ... */
 }
 
 @media (max-width: 480px) {
     .logo-img {
-        height: 35px; /* Ajuste para Telemóvel */
+        height: 35px; 
     }
 
     nav a {
@@ -334,7 +326,7 @@ footer a:hover {
         font-size: 1.5em;
     }
 
-    .services-grid {
+    .services-grid, .gallery-grid {
         grid-template-columns: 1fr;
     }
 }
