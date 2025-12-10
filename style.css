@@ -1,8 +1,8 @@
 /* Paleta de Cores:
-   - Primary Pink/Rose: #F7CAC9 (Rosa suave)
-   - Secondary Gold/Beige: #D4A373 (Um toque de dourado/bege)
-   - Text/Dark: #333333 (Preto suave para leitura)
-   - Background Light: #FFFFFF (Branco)
+   - Primary Pink/Rose (Nadia Irina Link): #F7CAC9
+   - New Accent Red (Major Elements): #C61455
+   - Dark Text: #333333
+   - Background Light: #FFFFFF
 */
 
 /* Base Styles */
@@ -41,15 +41,17 @@ header .container {
     align-items: center;
 }
 
-/* NOVO ESTILO PARA LOGÓTIPO EM IMAGEM */
+/* NOVO ESTILO PARA LOGÓTIPO EM IMAGEM (Tamanho Aumentado) */
 .logo-img {
-    height: 100px; /* Define a altura da imagem do logótipo */
+    height: 55px; 
     width: auto;
     display: block;
+    transition: height 0.3s;
 }
 
+/* Cor dos links da navegação (vermelho) */
 nav a {
-    color: #333333;
+    color: #C61455; /* NOVO VERMELHO: C61455 */
     text-decoration: none;
     margin-left: 25px;
     font-weight: 500;
@@ -57,33 +59,35 @@ nav a {
 }
 
 nav a:hover {
-    color: #D4A373; /* Dourado/Bege */
+    color: #9C1044; /* Vermelho um pouco mais escuro no hover */
 }
 
+/* Cor dos ícones sociais (vermelho) */
 .social-links a {
-    color: #F7CAC9;
+    color: #C61455; /* NOVO VERMELHO: C61455 */
     font-size: 1.5em;
     margin-left: 15px;
     transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: #D4A373;
+    color: #9C1044; /* Vermelho um pouco mais escuro no hover */
 }
 
 /* Hero Section */
 #hero {
-    /* ATENÇÃO: Substitua 'nail_designer_hero.jpg' pela sua imagem de fundo */
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(247, 202, 201, 0.4)), url('nail_designer_hero.jpg') no-repeat center center/cover;
+    /* Mudar o gradiente de rosa para o novo vermelho */
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(198, 20, 85, 0.4)), url('nail_designer_hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     align-items: center;
     text-align: center;
 }
 
+/* Cor do título principal (vermelho) */
 #hero h2 {
     font-size: 3em;
-    color: #333333;
+    color: #C61455; /* NOVO VERMELHO: C61455 */
     margin-bottom: 20px;
 }
 
@@ -92,9 +96,10 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
+/* Estilo do botão (vermelho) */
 .btn {
     display: inline-block;
-    background-color: #F7CAC9;
+    background-color: #C61455; /* NOVO VERMELHO: C61455 */
     color: white;
     padding: 12px 25px;
     text-decoration: none;
@@ -104,7 +109,7 @@ nav a:hover {
 }
 
 .btn:hover {
-    background-color: #D4A373;
+    background-color: #9C1044; /* Vermelho um pouco mais escuro no hover (remove o bege) */
 }
 
 /* General Section Styling */
@@ -117,10 +122,11 @@ section:nth-child(even) {
     background-color: #F9F9F9;
 }
 
+/* Cor dos títulos de secção H3 (vermelho) */
 section h3 {
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: #F7CAC9;
+    color: #C61455; /* NOVO VERMELHO: C61455 */
 }
 
 /* About Section */
@@ -161,13 +167,15 @@ section h3 {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Box-shadow no hover (vermelho transparente) */
 .service-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(247, 202, 201, 0.5);
+    box-shadow: 0 10px 20px rgba(198, 20, 85, 0.5); /* NOVO VERMELHO: C61455 com transparência */
 }
 
+/* Cor dos títulos dos serviços H4 (vermelho) */
 .service-item h4 {
-    color: #D4A373;
+    color: #C61455; /* NOVO VERMELHO: C61455 */
     margin-bottom: 10px;
 }
 
@@ -176,7 +184,7 @@ section h3 {
     max-width: 600px;
     margin: 40px auto;
     padding: 30px;
-    border: 1px solid #F7CAC9;
+    border: 1px solid #C61455; /* Borda do formulário em Vermelho */
     border-radius: 8px;
     text-align: left;
     background-color: #fff;
@@ -227,13 +235,32 @@ section h3 {
     margin: 10px 0;
 }
 
-/* Footer */
+/* Footer (Fundo Vermelho, Letras Brancas) */
 footer {
-    background-color: #333333;
-    color: white;
+    background-color: #C61455; /* NOVO VERMELHO: C61455 */
+    color: white; /* Letras em branco */
     padding: 20px 0;
     text-align: center;
     font-size: 0.9em;
+}
+
+/* Estilo para links dentro do footer */
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer a:hover {
+    color: white; /* Mantém branco */
+    text-decoration: underline;
+}
+
+/* Letras "Nadia Irina" em rosa (F7CAC9) */
+.designer-name {
+    color: #F7CAC9; /* ROSA SUAVE: F7CAC9 */
+    transition: color 0.3s;
+}
+.designer-name:hover {
+    color: #D4A373; /* Bege/Dourado no hover para contraste */
 }
 
 /* Animações Suaves (Scroll) */
@@ -268,7 +295,7 @@ footer {
     }
     
     .logo-img {
-        height: 35px; /* Ajuste ligeiro para tablet/telemóvel */
+        height: 40px; /* Ajuste para Tablet e ecrãs menores */
     }
 
     #hero {
@@ -291,7 +318,7 @@ footer {
 
 @media (max-width: 480px) {
     .logo-img {
-        height: 30px; 
+        height: 35px; /* Ajuste para Telemóvel */
     }
 
     nav a {
