@@ -43,7 +43,7 @@ header .container {
 
 /* NOVO ESTILO PARA LOGÓTIPO EM IMAGEM (Tamanho Aumentado) */
 .logo-img {
-    height: 55px; 
+    height: 100px; 
     width: auto;
     display: block;
     transition: height 0.3s;
