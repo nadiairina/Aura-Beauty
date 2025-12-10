@@ -1,0 +1,313 @@
+/* Paleta de Cores:
+   - Primary Pink/Rose: #F7CAC9 (Rosa suave)
+   - Secondary Gold/Beige: #D4A373 (Um toque de dourado/bege)
+   - Text/Dark: #333333 (Preto suave para leitura)
+   - Background Light: #FFFFFF (Branco)
+*/
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #FFFFFF;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header/Navigation */
+header {
+    background-color: #FFFFFF;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* NOVO ESTILO PARA LOGÓTIPO EM IMAGEM */
+.logo-img {
+    height: 40px; /* Define a altura da imagem do logótipo */
+    width: auto;
+    display: block;
+}
+
+nav a {
+    color: #333333;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #D4A373; /* Dourado/Bege */
+}
+
+.social-links a {
+    color: #F7CAC9;
+    font-size: 1.5em;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #D4A373;
+}
+
+/* Hero Section */
+#hero {
+    /* ATENÇÃO: Substitua 'nail_designer_hero.jpg' pela sua imagem de fundo */
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(247, 202, 201, 0.4)), url('nail_designer_hero.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 3em;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #F7CAC9;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #D4A373;
+}
+
+/* General Section Styling */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+section:nth-child(even) {
+    background-color: #F9F9F9;
+}
+
+section h3 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #F7CAC9;
+}
+
+/* About Section */
+#about .content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 40px;
+}
+
+#about .text {
+    flex: 1;
+}
+
+#about .image {
+    flex: 1;
+    max-width: 400px;
+}
+
+#about .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(247, 202, 201, 0.5);
+}
+
+.service-item h4 {
+    color: #D4A373;
+    margin-bottom: 10px;
+}
+
+/* Contact Section (Formulário) */
+#contact form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #F7CAC9;
+    border-radius: 8px;
+    text-align: left;
+    background-color: #fff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.form-status {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contact-info {
+    margin-top: 40px;
+    font-size: 1.1em;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Animações Suaves (Scroll) */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries para Design Responsivo (Tablet e Telemóvel) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .social-links {
+        margin-top: 15px;
+    }
+    
+    .logo-img {
+        height: 35px; /* Ajuste ligeiro para tablet/telemóvel */
+    }
+
+    #hero {
+        height: 60vh;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #about .content {
+        flex-direction: column;
+    }
+
+    #about .image {
+        order: -1; 
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 30px; 
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    section h3 {
+        font-size: 2em;
+    }
+
+    #hero h2 {
+        font-size: 1.5em;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
