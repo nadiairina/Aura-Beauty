@@ -43,7 +43,7 @@ header .container {
 
 /* NOVO ESTILO PARA LOGÓTIPO EM IMAGEM (Tamanho Aumentado) */
 .logo-img {
-    height: 100px; 
+    height: 55px; 
     width: auto;
     display: block;
     transition: height 0.3s;
@@ -129,7 +129,7 @@ section h3 {
     color: #C61455; /* NOVO VERMELHO: C61455 */
 }
 
-/* About Section - AGORA CENTRADA */
+/* About Section - CENTRADA */
 #about .content {
     display: flex;
     flex-direction: column; /* Coloca o texto e a imagem em coluna */
@@ -207,27 +207,60 @@ section h3 {
 }
 /* FIM DA SECÇÃO GALLERY */
 
-/* Contact Section (Formulário) */
+/* Contact Section (Formulário) - OTIMIZAÇÃO AQUI */
 #contact form {
-    max-width: 600px;
+    max-width: 700px; /* AUMENTADO para dar mais espaço */
     margin: 40px auto;
-    padding: 30px;
-    border: 1px solid #C61455; /* Borda do formulário em Vermelho */
-    border-radius: 8px;
+    padding: 40px; /* AUMENTADO para mais espaço interior */
+    border: 2px solid #C61455; /* Borda mais grossa em Vermelho */
+    border-radius: 10px; /* Borda mais arredondada */
     text-align: left;
     background-color: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1); /* Sombra suave para destacar */
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* AUMENTADO o espaço entre campos */
 }
-/* ... (Restante do formulário) ... */
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* AUMENTADO o espaço entre label e input */
+    font-weight: bold;
+    color: #C61455; /* Cor da label em Vermelho */
+    font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px; /* AUMENTADO o padding interno */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #C61455; /* Borda Vermelha no foco */
+    box-shadow: 0 0 5px rgba(198, 20, 85, 0.5);
+    outline: none; /* Remove a borda padrão do browser */
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px; /* AUMENTADO a altura mínima da área de texto */
+}
 
 .error-message {
-    color: red;
-    font-size: 0.9em;
+    color: #C61455; /* Cor do erro em Vermelho */
+    font-size: 1em;
     margin-top: 5px;
 }
+
+/* O botão 'Enviar Pedido' já usa a classe .btn (que é vermelha) */
 
 .form-status {
     text-align: center;
@@ -238,7 +271,7 @@ section h3 {
 .contact-info {
     margin-top: 40px;
     font-size: 1.1em;
-    text-align: center; /* Centra a info de contacto */
+    text-align: center;
 }
 
 .contact-info p {
@@ -290,7 +323,6 @@ footer a:hover {
     header .container {
         flex-direction: column;
     }
-    /* ... (outras regras de media query) ... */
     
     .logo-img {
         height: 40px; 
@@ -303,8 +335,12 @@ footer a:hover {
     #hero h2 {
         font-size: 2em;
     }
-
-    /* O #about.content já está em column, não é preciso nova regra */
+    
+    /* Ajuste o padding do formulário em ecrãs pequenos */
+    #contact form {
+        padding: 30px; 
+    }
+    
     /* ... (outras regras de media query) ... */
 }
 
@@ -312,21 +348,6 @@ footer a:hover {
     .logo-img {
         height: 35px; 
     }
-
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
     
-    section h3 {
-        font-size: 2em;
-    }
-
-    #hero h2 {
-        font-size: 1.5em;
-    }
-
-    .services-grid, .gallery-grid {
-        grid-template-columns: 1fr;
-    }
+    /* ... (outras regras de media query) ... */
 }
