@@ -43,7 +43,7 @@ header .container {
 
 /* NOVO ESTILO PARA LOGÓTIPO EM IMAGEM */
 .logo-img {
-    height: 40px; /* Define a altura da imagem do logótipo */
+    height: 70px; /* Define a altura da imagem do logótipo */
     width: auto;
     display: block;
 }
