@@ -77,7 +77,7 @@ nav a:hover {
 /* Hero Section */
 #hero {
     /* MUDAR IMAGEM AQUI: Substitua 'nail_designer_hero.jpg' pela sua imagem principal */
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(198, 20, 85, 0.4)), url('fundo.png') no-repeat center center/cover;
+    background: url('fundo.png') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     align-items: center;
