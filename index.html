@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Beauty - Nail Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Logótipo Aura Beauty" class="logo-img">
+            </div>
+            
+            <nav>
+                <a href="#about">Quem Sou</a>
+                <a href="#services">Serviços</a>
+                <a href="#contact">Contactos</a>
+            </nav>
+            <div class="social-links">
+                <a href="https://instagram.com/o_seu_instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/o_seu_facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="scroll-animation">
+        <div class="container">
+            <h2>Arte e Elegância nas Suas Mãos.</h2>
+            <p>Transformamos as suas unhas em obras de arte. Qualidade, paixão e design exclusivo.</p>
+            <a href="#contact" class="btn">Agende a Sua Sessão</a>
+        </div>
+    </section>
+
+    <section id="about" class="scroll-animation">
+        <div class="container">
+            <h3>Quem Sou</h3>
+            <div class="content">
+                <div class="text">
+                    <p>Olá! O meu nome é [Seu Nome] e sou uma Nail Designer apaixonada pela estética e cuidado das unhas. Com [X] anos de experiência, dedico-me a oferecer um serviço personalizado, onde a higiene, a qualidade dos materiais e a satisfação da cliente são a minha prioridade.</p>
+                    <p>Acredito que as unhas são um poderoso acessório de moda e auto-estima. Por isso, estou sempre a par das últimas tendências e técnicas para garantir que cada design é único e reflete a sua personalidade.</p>
+                </div>
+                <div class="image">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="scroll-animation">
+        <div class="container">
+            <h3>Os Meus Serviços</h3>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h4>Gel/Verniz Gel</h4>
+                    <p>Durabilidade e brilho impecável. Perfeito para unhas naturais, com uma variedade de cores e acabamentos.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Extensão de Unhas</h4>
+                    <p>Construção de unhas em gel ou acrílico para o comprimento e forma que sempre sonhou. Segurança e estética.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Nail Art Personalizada</h4>
+                    <p>Desde o minimalista ao mais elaborado: desenhos à mão, *glitter*, pedrarias, e muito mais. Criatividade sem limites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="scroll-animation">
+        <div class="container">
+            <h3>Contacte-me</h3>
+            <p>Pronta para unhas deslumbrantes? Preencha o formulário e entrarei em contacto consigo o mais brevemente possível.</p>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error-message" id="nameError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="emailError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem/Pedido:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <div class="error-message" id="messageError"></div>
+                </div>
+                <button type="submit" class="btn">Enviar Pedido</button>
+                <p id="formStatus" class="form-status"></p>
+            </form>
+
+            <div class="contact-info">
+                <p>📍 Morada (Exemplo): Rua das Unhas Bonitas, 123</p>
+                <p>📞 Telefone: +351 9XX XXX XXX</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Aura Beauty. Todos os direitos reservados. | Web Design por Nadia Irina (Exemplo)</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
